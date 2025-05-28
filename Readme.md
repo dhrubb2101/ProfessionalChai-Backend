@@ -9,3 +9,72 @@ chai aur backend series to build a professional backend project with javascript
 
 //whatever files related to node js we will put in gitignore file
 //any other files that you don't want to push to the git repository, you can put them in the gitignore file
+
+//in js we import files either using module or common js
+//in common js we use require and in module we use import
+
+//Explanation of "dev": "nodemon src/index.js"
+This line is typically part of the scripts section in a project's package.json file.
+
+It defines a shortcut to run the nodemon tool to execute the file src/index.js during development.
+
+Example in package.json:
+{
+"scripts": {
+"dev": "nodemon src/index.js"
+}
+}
+
+//What is nodemon?
+nodemon is a development utility for Node.js that automatically restarts the application when it detects changes in the source files. It improves developer productivity by removing the need to manually restart the Node.js server.
+
+How to Use nodemon
+Install nodemon as a dev dependency:
+
+npm install nodemon --save-dev
+Run the script:
+
+npm run dev
+Behavior:
+
+The server (src/index.js) will start.
+
+When you make changes to any file in the project, nodemon will detect it and restart the server automatically.
+
+//Benefits of nodemon
+Automatic Restart: Restarts the server on file changes.
+
+Efficiency: No need for manual restarts during development.
+
+Customization: Supports configuration for watching specific file types or directories.
+
+---//When you run the command "dev": "nodemon src/index.js" using npm run dev, here's what happens with index.js:
+
+-Start the Application:
+
+nodemon starts the Node.js application by running the src/index.js file.
+
+This file typically contains your server setup (e.g., Express app initialization).
+
+Watch for Changes:
+
+nodemon continuously monitors all files in your project directory (by default) for changes.
+
+If you modify and save any file (e.g., index.js, routes.js, or a .env file), nodemon detects the change.
+
+Restart the Application:
+
+When a change is detected, nodemon stops the current application process and restarts it with the updated code.
+
+You don't need to manually stop and restart your application.
+
+Why Use It with index.js?
+The index.js file is often the entry point for a Node.js app. It might:
+
+Initialize an Express server.
+
+Connect to a database.
+
+Define API routes.
+
+Using nodemon ensures that any changes you make to this file (or related files) are immediately reflected in the running app without manual intervention.
