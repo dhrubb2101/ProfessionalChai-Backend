@@ -109,3 +109,24 @@ Examples include authentication, logging, input validation, and error handling.
 -Usage:
 Functions for formatting, logging, email sending, or other generic tasks.
 Typically independent of specific features.
+
+//command to download prettier
+npm install --save-dev prettier
+npm i -D prettier
+
+To set up Prettier for your project, you typically add a configuration file to define your formatting rules. Here’s an example of a .prettierrc file:
+
+//Explanation of Properties:
+-semi: Adds a semicolon at the end of statements (true by default).
+trailingComma: Adds trailing commas where valid (e.g., in objects, arrays).
+Options: "none", "es5", "all".
+-singleQuote: Uses single quotes for strings instead of double quotes.
+-printWidth: Sets the maximum line length before wrapping.
+-tabWidth: Defines the number of spaces per indentation level.
+-useTabs: Uses tabs instead of spaces for indentation.
+-arrowParens: Controls parentheses around arrow function parameters
+Options: "always", "avoid".
+-bracketSpacing: Controls spaces between brackets in object literal
+Example: { foo: bar } vs {foo: bar}.
+-endOfLine: Specifies the line-ending style.
+Options: "lf", "crlf", "cr", "auto".
