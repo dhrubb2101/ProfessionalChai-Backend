@@ -78,3 +78,34 @@ Connect to a database.
 Define API routes.
 
 Using nodemon ensures that any changes you make to this file (or related files) are immediately reflected in the running app without manual intervention.
+
+//Folder Structure added in Src and their usecases  
+/src
+/controllers
+-Purpose: Contains the logic for handling requests and responses.
+Usage:
+-Controllers process incoming HTTP requests, perform necessary operations (e.g., call services/models), and send responses back to the client.
+-Each controller corresponds to a specific module or feature (e.g., userController.js, productController.js).
+
+/models
+-Purpose: Defines data models and schemas for the application.
+-Usage:
+Represents the structure of data in the database.
+Typically uses libraries like Mongoose (MongoDB) or Sequelize (SQL databases).
+
+/routes-
+-Purpose: Manages the routing of HTTP requests to the appropriate controller.-Usage:
+Contains route definitions for API endpoints (e.g., /users, /products).
+Often modularized into files for each feature (e.g., userRoutes.js, productRoutes.js).
+
+/middlewares-
+-Purpose: Contains middleware functions to handle request preprocessing.
+-Usage:
+Middleware is executed before controllers handle requests.
+Examples include authentication, logging, input validation, and error handling.
+
+/utils
+-Purpose: Contains reusable utility functions or helper modules.
+-Usage:
+Functions for formatting, logging, email sending, or other generic tasks.
+Typically independent of specific features.
